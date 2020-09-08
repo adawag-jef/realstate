@@ -26,7 +26,7 @@ SECRET_KEY = 'esmsnoo^%(brz4xx)&oi1mjm!&bzy%=g0*al5ue0fb5o2+k!+2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'accounts',
     'realtors',
     'listings',
+    'contacts',
 ]
 
 MIDDLEWARE = [
@@ -91,6 +92,13 @@ DATABASES = {
         "OPTIONS": {"init_command": "SET sql_mode='STRICT_TRANS_TABLES'"},
     }
 }
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'epyadawag@gmail.com'
+EMAIL_HOST_PASSWORD = 'fwisbwaavebirjet'
+EMAIL_USE_TLS = True
 
 
 # Password validation
