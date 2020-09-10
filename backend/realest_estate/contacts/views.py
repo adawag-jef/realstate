@@ -19,7 +19,7 @@ class ContactCreateView(APIView):
                 + data['email']
                 +'\n\n Message: \n'
                 + data['message'],
-                'epyadawag@gmail.com',
+                'epyadawag@noreply.com',
                 ['epyadawag@gmail.com'],
                 fail_silently=False
             )
